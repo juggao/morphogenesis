@@ -1,5 +1,5 @@
 <pre>
-g++ -o turing turing_pattern.cpp -std=c++11 -O3 -march=native -pthread
+g++ -o turing turing_final.cpp -std=c++11 -O3 -march=native -pthread
 
 ./turing
 
