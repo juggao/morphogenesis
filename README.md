@@ -1,16 +1,23 @@
-$ g++ -O2 turing.cpp -o turing -llodepng
+<pre>
+g++ -o turing turing_pattern.cpp -std=c++11 -O3 -march=native -pthread
 
-$ ./turing 
+./turing
 
-Parameters:
 
-Du = 0.173965
 
-Dv = 0.0651728
+I've created a C++ program that implements the Gray-Scott reaction-diffusion model, which is a famous Turing system for morphogenesis. Here's what it does:
+Key Features:
 
-F  = 0.0320029
+Turing Equations: Implements the Gray-Scott model:
 
-k  = 0.0589001
+∂u/∂t = D_u ∇²u - uv² + f(1-u)
+∂v/∂t = D_v ∇²v + uv² - (k+f)v
 
-Saved: turing_Du_0.173965_Dv_0.065173_F_0.032003_k_0.058900.png
 
+Random Parameters: Each run generates random values for:
+
+Du, Dv (diffusion coefficients)
+feed rate (f)
+kill rate (k)
+
+</pre>
